@@ -505,6 +505,9 @@ MonoBehaviour:
   - {fileID: 7523762333446077375, guid: 8f705605830c84240a4dd56e3c032ebd, type: 3}
   - {fileID: 3221975840587173466, guid: b0dccff064103ac4dbe1b4d2cae08490, type: 3}
   - {fileID: 3701656620142364996, guid: f04de592f7a04c54eb3fed8cecadff6b, type: 3}
+  - {fileID: 4340008921216016050, guid: a360f6572abf9bb40a81c1c7ebfbb357, type: 3}
+  - {fileID: 5762956432874481953, guid: a69d4b38163c1ec45a2238725b20c507, type: 3}
+  - {fileID: 7782245431301633510, guid: e7a2d295c4d78ac418d90937f80f1958, type: 3}
 --- !u!1 &3387723964429617296
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +662,9 @@ MonoBehaviour:
   - {fileID: 7523762333446077375, guid: 8f705605830c84240a4dd56e3c032ebd, type: 3}
   - {fileID: 3221975840587173466, guid: b0dccff064103ac4dbe1b4d2cae08490, type: 3}
   - {fileID: 3701656620142364996, guid: f04de592f7a04c54eb3fed8cecadff6b, type: 3}
+  - {fileID: 4340008921216016050, guid: a360f6572abf9bb40a81c1c7ebfbb357, type: 3}
+  - {fileID: 5762956432874481953, guid: a69d4b38163c1ec45a2238725b20c507, type: 3}
+  - {fileID: 7782245431301633510, guid: e7a2d295c4d78ac418d90937f80f1958, type: 3}
 --- !u!1 &3799630084016996181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leaveRoomDoors:
   - {fileID: 2999640512244768605}
-  _furniturePlaces: []
   _enterDoor: {fileID: 1456635701432833366}
 --- !u!1 &8951260434908634175
 GameObject:
