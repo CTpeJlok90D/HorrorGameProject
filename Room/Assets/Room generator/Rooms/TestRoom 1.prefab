@@ -2468,6 +2468,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6375245214448317077, guid: 762fb50353ad2474685d8113e620fce6,
         type: 3}
+      propertyPath: _possibleRooms
+      value: 
+      objectReference: {fileID: 11400000, guid: b2c17091cf40bc0458ade1922e210906,
+        type: 2}
+    - target: {fileID: 6375245214448317077, guid: 762fb50353ad2474685d8113e620fce6,
+        type: 3}
       propertyPath: _possibleRooms.Array.data[0]
       value: 
       objectReference: {fileID: -2953364626582291531}
@@ -2577,6 +2583,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door frame
       objectReference: {fileID: 0}
+    - target: {fileID: 6375245214448317077, guid: 762fb50353ad2474685d8113e620fce6,
+        type: 3}
+      propertyPath: _possibleRooms
+      value: 
+      objectReference: {fileID: 11400000, guid: b2c17091cf40bc0458ade1922e210906,
+        type: 2}
     - target: {fileID: 6375245214448317077, guid: 762fb50353ad2474685d8113e620fce6,
         type: 3}
       propertyPath: _possibleRooms.Array.data[0]
@@ -2794,6 +2806,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door frame
       objectReference: {fileID: 0}
+    - target: {fileID: 6375245214448317077, guid: 762fb50353ad2474685d8113e620fce6,
+        type: 3}
+      propertyPath: _possibleRooms
+      value: 
+      objectReference: {fileID: 11400000, guid: b2c17091cf40bc0458ade1922e210906,
+        type: 2}
     - target: {fileID: 6375245214448317077, guid: 762fb50353ad2474685d8113e620fce6,
         type: 3}
       propertyPath: _possibleRooms.Array.data[0]

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,14 +7,13 @@ public class NextRoomDoor : MonoBehaviour
     [SerializeField] private UnityEvent<NextRoomDoor> _openEvent = new();
     [SerializeField] private UnityEvent<NextRoomDoor> _playerEntered = new();
     [SerializeField] private bool _isOpen = false;
-    [SerializeField] private List<Room> _possibleRooms = new();
+    [SerializeField] private RoomList _possibleRooms;
 
     private Collider _trigger;
 
     public UnityEvent<NextRoomDoor> OpenEvent => _openEvent;
     public UnityEvent<NextRoomDoor> PlayerEntered => _playerEntered;
     public bool IsOpen => _isOpen;
-    public List<Room> PossibleRooms => new(_possibleRooms);
 
     private void Awake()
     {
@@ -36,7 +34,7 @@ public class NextRoomDoor : MonoBehaviour
 
     public Room GenerateNextRoom(Room previewRoom)
     {
-        return Instantiate(_possibleRooms[Random.Range(0, _possibleRooms.Count)],transform.position, transform.rotation).Init(previewRoom);
+        return Instantiate(_possibleRooms.List[Random.Range(0, _possibleRooms.List.Count)],transform.position, transform.rotation).Init(previewRoom);
     }
 
     protected void OnTriggerEnter(Collider other)
