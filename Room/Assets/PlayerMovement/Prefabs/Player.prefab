@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 6628600730524901391}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!143 &3676412870067155976
 CharacterController:
@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _charancter: {fileID: 3676412870067155976}
   _speed: 6
+  _gravity: 9.8
 --- !u!1 &4924747260341395733
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,4 +241,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 6628600730524901391}
+  _inventory: {fileID: 0}
   _interactDistance: 1.5

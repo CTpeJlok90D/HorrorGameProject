@@ -34,7 +34,7 @@ public class NextRoomDoor : MonoBehaviour
 
     public Room GenerateNextRoom(Room previewRoom)
     {
-        return Instantiate(_possibleRooms.List[Random.Range(0, _possibleRooms.List.Count)],transform.position, transform.rotation).Init(previewRoom);
+        return Instantiate(_possibleRooms.List[Random.Range(0, _possibleRooms.List.Count)], transform.position, transform.rotation).Init(previewRoom);
     }
 
     protected void OnTriggerEnter(Collider other)

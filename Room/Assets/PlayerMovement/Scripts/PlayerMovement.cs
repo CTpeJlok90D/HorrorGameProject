@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private CharacterController _charancter;
     [SerializeField] private float _speed;
-
+    [SerializeField] private float _gravity;
     public Vector3 MoveDirection
     {
         get
@@ -19,5 +19,11 @@ public class PlayerMovement : MonoBehaviour
     protected void FixedUpdate()
     {
         _charancter.Move(MoveDirection * _speed * Time.fixedDeltaTime);
+        AppplyGravitation();
+    }
+
+    private void AppplyGravitation()
+    {
+        _charancter.Move(Physics.gravity.normalized * _gravity);
     }
 }

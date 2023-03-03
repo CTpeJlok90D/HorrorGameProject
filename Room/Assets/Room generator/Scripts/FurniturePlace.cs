@@ -15,6 +15,11 @@ public class FurniturePlace : MonoBehaviour
 
     public void GenerateObject()
     {
-        _instance = Instantiate(_furniturePrefubs[Random.Range(0, _furniturePrefubs.Count)], transform);
+        GameObject prefab = _furniturePrefubs[Random.Range(0, _furniturePrefubs.Count)];
+
+        if (prefab != null)
+        {
+            _instance = Instantiate(prefab, transform);
+        }
     }
 }

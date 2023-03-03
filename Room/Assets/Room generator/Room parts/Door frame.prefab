@@ -159,11 +159,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isOpen: 0
-  _possibleRooms:
-  - {fileID: -2953364626582291531, guid: 534e22864a1b04a40b69a2a90351e691, type: 3}
-  - {fileID: -2953364626582291531, guid: 2fb1d835fb657e44c8d9ff9337b089c5, type: 3}
-  - {fileID: -2953364626582291531, guid: b5ac54581a64c754fb2afc478f720b82, type: 3}
-  - {fileID: -2953364626582291531, guid: 0b4a6f052d9d9e440b59d450321d6f66, type: 3}
+  _possibleRooms: {fileID: 0}
 --- !u!65 &6020232352822227465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -183,8 +179,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 5, z: 2.73}
-  m_Center: {x: 0, y: 2.5, z: 0}
+  m_Size: {x: 0.15, y: 2.5, z: 1.6}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!1 &2894159789063213422
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 6400078790576800455}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3517814158474524826}
