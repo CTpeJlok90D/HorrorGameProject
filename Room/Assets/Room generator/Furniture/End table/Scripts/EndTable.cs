@@ -22,7 +22,7 @@ public class EndTable : MonoBehaviour
         _interacteble.OnInteract.RemoveListener(OnInteract);
     }
 
-    private void OnInteract()
+    private void OnInteract(InteractInfo info)
     {
         _isOpen = !_isOpen;
         _animator.SetBool("IsOpen",_isOpen);

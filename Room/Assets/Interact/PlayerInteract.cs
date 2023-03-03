@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private Transform _camera;
+    [SerializeField] private Container _inventory;
     [SerializeField] private float _interactDistance;
 
     private void OnEnable()
@@ -20,10 +21,14 @@ public class PlayerInteract : MonoBehaviour
     {
         Ray ray = new(_camera.position, _camera.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, _interactDistance) && 
+        if (Physics.Raycast(ray, out RaycastHit hit, _interactDistance) &&
             hit.collider.TryGetComponent(out Interacteble interacteble))
         {
-            interacteble.Interact();
+            InteractInfo info = new InteractInfo()
+            {
+                Inventory = _inventory
+            };
+            interacteble.Interact(info);
         }
     }
 
