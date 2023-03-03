@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3b8e3b0f8e3ce40bdfa02aa27096d1, type: 3}
+  m_Name: TestRoomList
+  m_EditorClassIdentifier: 
+  _list:
+  - {fileID: -2953364626582291531, guid: 534e22864a1b04a40b69a2a90351e691, type: 3}
+  - {fileID: -2953364626582291531, guid: 2fb1d835fb657e44c8d9ff9337b089c5, type: 3}
+  - {fileID: -2953364626582291531, guid: b5ac54581a64c754fb2afc478f720b82, type: 3}
+  - {fileID: -2953364626582291531, guid: 79971e962af750e418b641a56a50fac5, type: 3}
+  - {fileID: -2953364626582291531, guid: 0b4a6f052d9d9e440b59d450321d6f66, type: 3}
