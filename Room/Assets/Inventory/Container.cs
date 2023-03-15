@@ -8,6 +8,31 @@ public class Container : MonoBehaviour
 
     public bool IsFull => _maxStackCount == _stacks.Count;
 
+    public bool ContainsItem(ItemData item)
+    {
+        foreach (Stack stack in _stacks)
+        {
+            if (stack.ItemData == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool RemoveItem(ItemData item)
+    {
+        foreach (Stack stack in _stacks)
+        {
+            if (stack.ItemData == item)
+            {
+                _stacks.Remove(stack);
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Stack AddStack(Stack stack)
     {
         foreach (Stack iteratorStack in _stacks.ToArray())

@@ -21,7 +21,7 @@ public class Room : MonoBehaviour
 
         foreach (NextRoomDoor door in _leaveRoomDoors)
         {
-            door.PlayerEntered.AddListener(OnPlayerLeaveRoom);
+            door?.PlayerEntered.AddListener(OnPlayerLeaveRoom);
         }
     }
 
@@ -41,15 +41,13 @@ public class Room : MonoBehaviour
         GenerateNextRooms(this);
     }
 
-    private void OnPlayerLeaveRoom(NextRoomDoor leftDoor)
+    private void OnPlayerLeaveRoom()
     {
         _enterDoor?.Close();
         foreach (NextRoomDoor door in _leaveRoomDoors)
         {
-            if (door != leftDoor)
-            {
-                door?.Close();
-            }
+            door?.Close();
+            door?.LockPermanently();
         }
     }
 

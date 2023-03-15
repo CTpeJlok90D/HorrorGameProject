@@ -16,9 +16,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    protected void FixedUpdate()
+    protected void Update()
     {
-        _charancter.Move(MoveDirection * _speed * Time.fixedDeltaTime);
+        _charancter.Move(MoveDirection * _speed * Time.deltaTime);
         AppplyGravitation();
     }
 
