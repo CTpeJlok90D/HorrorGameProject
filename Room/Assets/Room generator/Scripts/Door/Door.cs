@@ -1,4 +1,6 @@
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,10 +16,12 @@ public class Door : MonoBehaviour
     [SerializeField] private UnityEvent _unlocked = new();
     [SerializeField] private UnityEvent<bool> _lockStateChanged = new();
     [SerializeField] private Transform _view;
-    [SerializeField] private float _openedAngle = 90;
+    [SerializeField] private Vector3 _openedAngles = new Vector3(0, 90,0);
     [SerializeField] private float _openSpeed = 1f;
 
     [SerializeField] private Interacteble _doorHandle;
+
+    private Vector3 _standartRotation;
 
     public UnityEvent<bool> StateChanged => _openStateChanged;
     public UnityEvent Closed => _closed;
@@ -28,7 +32,7 @@ public class Door : MonoBehaviour
     public UnityEvent<bool> LockStateChanged => _lockStateChanged;
     public Transform View => _view;
 
-    public float OpenAngle => _openedAngle;
+    public Vector3 OpenAngles => _openedAngles;
     public float OpenSpeed => _openSpeed;
     public Interacteble DoorHandle => _doorHandle;
 
@@ -50,12 +54,12 @@ public class Door : MonoBehaviour
 
             if (_isOpen)
             {
-                StartCoroutine(RotateDoorCorotine(_openedAngle));
+                StartCoroutine(RotateDoorCorotine(_openedAngles));
                 _opened.Invoke();
             }
             else
             {
-                StartCoroutine(RotateDoorCorotine(0));
+                StartCoroutine(RotateDoorCorotine(_standartRotation));
                 _closed.Invoke();
             }
         }
@@ -87,6 +91,11 @@ public class Door : MonoBehaviour
 
     public void OnInteract(InteractInfo info)
     {
+        InvertState();
+    }
+
+    public void InvertState()
+    {
         IsOpen = !IsOpen;
     }
 
@@ -116,7 +125,7 @@ public class Door : MonoBehaviour
         Destroy(DoorHandle);
     }
 
-    private IEnumerator RotateDoorCorotine(float targetAngle)
+    private IEnumerator RotateDoorCorotine(Vector3 targetAngle)
     {
         if (_doorHandle != null)
         {
@@ -124,7 +133,7 @@ public class Door : MonoBehaviour
         }
 
         float lerpCoefficient = 0;
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, targetAngle, 0));
+        Quaternion targetRotation = Quaternion.Euler(targetAngle);
         while (lerpCoefficient <= 1)
         {
             _view.localRotation = Quaternion.Lerp(_view.localRotation, targetRotation, lerpCoefficient);
@@ -136,6 +145,11 @@ public class Door : MonoBehaviour
         {
             _doorHandle.enabled = true;
         }
+    }
+
+    protected void Awake()
+    {
+        _standartRotation = transform.localEulerAngles;
     }
 
     protected void OnEnable()
@@ -155,17 +169,29 @@ public class Door : MonoBehaviour
     {
         PlayerEntered.Invoke();
     }
+}
 
-    private void OnValidate()
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(Door))]
+public class DoorEditor : Editor
+{
+    private new Door target => base.target as Door;
+
+    public override void OnInspectorGUI()
     {
-        if (_openedAngle > 360)
+        base.OnInspectorGUI();
+        if (GUILayout.Button("Interact"))
         {
-            _openedAngle = 360;
-        }
-
-        if (_openedAngle < 0)
-        {
-            _openedAngle = 0;
+            if (Application.isPlaying)
+            {
+                target.IsOpen = !target.IsOpen;
+            }
+            else
+            {
+                Debug.LogWarning("You can use interact button in playmode only!");
+            }
         }
     }
 }
+#endif

@@ -9,6 +9,8 @@ public class Room : MonoBehaviour
     [SerializeField] private EnterDoor _enterDoor;
     [SerializeField] private UnityEvent _playerEntered;
     [SerializeField] private UnityEvent _playerLeaved;
+    [Header("Editing")]
+    [SerializeField] private bool _autoUpdatedoors = true;
 
     private List<Room> _nextRooms = new();
     private Room _previewRoom;
@@ -21,6 +23,7 @@ public class Room : MonoBehaviour
     public Room Init(Room previewRoom)
     {
         _previewRoom = previewRoom;
+        UpdateRoomDoors();
         return this;
     }
 
@@ -101,6 +104,25 @@ public class Room : MonoBehaviour
         if (_previewRoom != null)
         {
             Destroy(_previewRoom.gameObject);
+        }
+    }
+
+    private void OnValidate()
+    {
+        UpdateRoomDoors();
+    }
+
+    private void UpdateRoomDoors()
+    {
+        if (_autoUpdatedoors == false) return;
+
+        _leaveRoomDoors.Clear();
+        foreach (Transform child in transform)
+        {
+            if (child.TryGetComponent(out NextRoomDoor door))
+            {
+                _leaveRoomDoors.Add(door);
+            }
         }
     }
 }

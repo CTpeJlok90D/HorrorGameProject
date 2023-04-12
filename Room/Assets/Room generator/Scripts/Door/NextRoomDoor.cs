@@ -1,5 +1,5 @@
+using UnityEditor;
 using UnityEngine;
-
 public class NextRoomDoor : Door
 {
     [SerializeField] private RoomList _possibleRooms;
@@ -25,3 +25,27 @@ public class NextRoomDoor : Door
         return null;
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(NextRoomDoor))]
+public class NextRoomDoorEditor : Editor
+{
+    private new NextRoomDoor target => base.target as NextRoomDoor;
+
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (GUILayout.Button("Interact"))
+        {
+            if (Application.isPlaying)
+            {
+                target.IsOpen = !target.IsOpen;
+            }
+            else
+            {
+                Debug.LogWarning("You can use interact button in playmode only!");
+            }
+        }
+    }
+}
+#endif
