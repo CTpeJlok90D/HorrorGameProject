@@ -20,7 +20,7 @@ public class NextRoomDoor : Door
     {
         if (_generateRoom)
         {
-            return Instantiate(_possibleRooms.List[Random.Range(0, _possibleRooms.List.Count)], transform.position, transform.rotation).Init(previewRoom);
+            return Instantiate(_possibleRooms.List.RandomElemet(), transform.position, transform.rotation).Init(previewRoom);
         }
         return null;
     }

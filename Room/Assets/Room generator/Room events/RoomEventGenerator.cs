@@ -7,7 +7,7 @@ public class RoomEventGenerator : MonoBehaviour
     [SerializeField] private List<RoomEvent> _possibleEvents;
     [SerializeField] private int _requestEventCount;
 
-    private List<RoomEvent> _currentEvents;
+    private List<RoomEvent> _currentEvents = new();
 
     private void Awake()
     {

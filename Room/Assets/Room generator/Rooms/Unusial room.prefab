@@ -46,7 +46,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -164,7 +164,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -246,6 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3787145022838589678}
   - component: {fileID: 2102282419482191215}
+  - component: {fileID: 2705498045894610220}
   m_Layer: 0
   m_Name: Unusial room
   m_TagString: Untagged
@@ -293,8 +294,6 @@ MonoBehaviour:
   - {fileID: 963121772153739698}
   - {fileID: 2136772849226841475}
   - {fileID: 7964263966465431099}
-  _light:
-  - {fileID: 4759627874220768736}
   _enterDoor: {fileID: 1796578358873720264}
   _playerEntered:
     m_PersistentCalls:
@@ -303,6 +302,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _autoUpdatedoors: 1
+--- !u!114 &2705498045894610220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4685370560706819671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6149ba18788c11b44bff88c2e34880e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lights: []
+  _simpleFurniture: []
+  _lightIsShining: 1
 --- !u!1 &4700550239261474617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,7 +2551,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2655,7 +2669,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

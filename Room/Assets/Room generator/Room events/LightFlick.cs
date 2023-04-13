@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class LightFlick : RoomEvent
 {
-    [SerializeField] private Room _room;
+    [SerializeField] private RoomFurnitureList _room;
     public override void OnPlayerEnter()
     {
-        _room.TurnOffLight();
+        _room.LightIsShining = false;
     }
 
     public override void OnPlayerLeave()
     {
-        _room.TurnOnLight();
+        _room.LightIsShining = true;
     }
 }

@@ -7,6 +7,10 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Container _inventory;
     [SerializeField] private float _interactDistance;
 
+    public Transform CameraTransform => _camera;
+    public Container Inventory => _inventory;
+    public float InteractDistance => _interactDistance;
+
     private void OnEnable()
     {
         InputSingletone.Instance.Player.Interact.started += OnInteract;

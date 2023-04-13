@@ -3,30 +3,33 @@ using UnityEngine;
 
 public class RandomObjectPlace : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _prefubs = new();
-    private GameObject _instance;
+    [SerializeField] private RoomObjectsList _prefabs;
+    [SerializeField] private RoomFurnitureList _roomFurnitureList;
 
-    public GameObject Instance => _instance;
+    private Furniture _instance;
+
+    public Furniture Instance => _instance;
 
     protected void Awake()
     {
         GenerateObject();
     }
 
-    public void GenerateObject()
+    public Furniture GenerateObject()
     {
-        GameObject prefab = _prefubs.RandomElemet();
-        GenerateObject(prefab);
+        Furniture prefab = _prefabs.Furnitures.RandomElemet();
+        return GenerateObject(prefab);
     }
 
-    public void GenerateObject(GameObject prefab)
+    public Furniture GenerateObject(Furniture prefab)
     {
         DestroyInstance();
 
-        if (prefab)
+        if (prefab != null)
         {
-            _instance = Instantiate(prefab, transform);
+            _instance = Instantiate(prefab, transform).Init(_roomFurnitureList);
         }
+        return _instance;
     }
 
     public void DestroyInstance()

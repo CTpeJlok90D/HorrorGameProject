@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StandartRoomList
   m_EditorClassIdentifier: 
   _list:
+  - {fileID: 2102282419482191215, guid: 396e5457d5173094b87c472628f0bb5f, type: 3}
   - {fileID: 2102282419482191215, guid: 6f49228b576150f47b8a8d0ac40a0e8a, type: 3}
   - {fileID: 2102282419482191215, guid: dc71b715b74babd4e95cc24c8e5b0671, type: 3}
-  - {fileID: 2102282419482191215, guid: 396e5457d5173094b87c472628f0bb5f, type: 3}
