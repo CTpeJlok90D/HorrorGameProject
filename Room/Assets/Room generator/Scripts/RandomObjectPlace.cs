@@ -1,19 +1,36 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomObjectPlace : MonoBehaviour
 {
     [SerializeField] private RoomObjectsList _prefabs;
     [SerializeField] private RoomFurnitureList _roomFurnitureList;
-
-    private Furniture _instance;
+    [SerializeField] private Furniture _instance;
 
     public Furniture Instance => _instance;
+    public RoomFurnitureList FurnitureList => _roomFurnitureList;
 
     protected void Awake()
     {
-        GenerateObject();
+        SetParentRoom();
+		GenerateObject();
     }
+
+    private void SetParentRoom()
+    {
+        RoomFurnitureList list = transform.GetComponentInParent<RoomFurnitureList>();
+		if (list != null)
+        {
+            _roomFurnitureList = list;
+            return;
+        }
+
+        RandomObjectPlace parentPlace = transform.GetComponentInParent<RandomObjectPlace>();
+        if (parentPlace != null)
+        {
+            parentPlace.SetParentRoom();
+            _roomFurnitureList = parentPlace.FurnitureList;
+        }
+	}
 
     public Furniture GenerateObject()
     {
@@ -39,4 +56,12 @@ public class RandomObjectPlace : MonoBehaviour
             Destroy(_instance.gameObject);
         }
     }
+
+#if UNITY_EDITOR
+
+    private void OnValidate()
+	{
+        SetParentRoom();
+	}
+#endif
 }

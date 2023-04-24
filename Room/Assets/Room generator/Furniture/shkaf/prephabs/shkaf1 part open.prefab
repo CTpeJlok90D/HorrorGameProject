@@ -8,6 +8,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2247949672868617419, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247949672868617419, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247949672868617419, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247949672868617419, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678386509895359767, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968262606676516066, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 6227820668087270169, guid: 72d8c172b6a08274d80191993b76dfed,
         type: 3}
       propertyPath: m_RootOrder
@@ -109,6 +139,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7328112842945864412}
+    - targetCorrespondingSourceObject: {fileID: 6712185654125339043, guid: 72d8c172b6a08274d80191993b76dfed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2250420775073633125}
     - targetCorrespondingSourceObject: {fileID: 2968262606676516066, guid: 72d8c172b6a08274d80191993b76dfed,
         type: 3}
       insertIndex: -1
@@ -168,3 +202,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.97413933, y: 2.6534042, z: 1.915806}
   m_Center: {x: -0.012930334, y: 1.4249341, z: 0.0034321547}
+--- !u!114 &-2250420775073633125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094218188424298536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9832811302f80c44846eee4eaf97ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subFurnitures: []

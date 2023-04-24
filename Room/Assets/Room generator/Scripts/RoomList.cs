@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Room genaration/Room list")]
 public class RoomList : ScriptableObject
 {
     [SerializeField] private List<Room> _list;

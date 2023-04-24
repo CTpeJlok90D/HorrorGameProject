@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 064e65740ca52884cb6118517a842ea7, type: 3}
-  m_Name: SimpleList
+  m_Name: Shelfs
   m_EditorClassIdentifier: 
   _furnitures:
-  - {fileID: -3508861283264887493, guid: 675e7b1a276baab4d9962d927403904d, type: 3}
-  - {fileID: 6645228540268420919, guid: 2aa88a61a4862ed43b49c5f2bf959d74, type: 3}
+  - {fileID: 449869300231735910, guid: 6a447178d14c04e4f8c308ce54ad6b9b, type: 3}
+  - {fileID: 5418853365491993943, guid: b64160adc9a17e049a0139e9339852f2, type: 3}
+  - {fileID: -7085722939765888019, guid: 72d8c172b6a08274d80191993b76dfed, type: 3}

@@ -16,17 +16,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 306ca2ed228c6184888a14adf43eb5da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.51694
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 306ca2ed228c6184888a14adf43eb5da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 306ca2ed228c6184888a14adf43eb5da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.799679
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 306ca2ed228c6184888a14adf43eb5da,
         type: 3}
@@ -102,6 +102,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 306ca2ed228c6184888a14adf43eb5da,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8133553714595177271}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 306ca2ed228c6184888a14adf43eb5da,
         type: 3}
       insertIndex: -1
@@ -347,6 +351,25 @@ MonoBehaviour:
   _closePosition: {x: -0.079591766, y: 0.37575525, z: -0.004629497}
   _isOpen: 0
   _openSpeed: 1
+--- !u!1 &4884101058146729990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 306ca2ed228c6184888a14adf43eb5da,
+    type: 3}
+  m_PrefabInstance: {fileID: 5694443120213572951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8133553714595177271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4884101058146729990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9832811302f80c44846eee4eaf97ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subFurnitures: []
 --- !u!1 &4938999999577788211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 306ca2ed228c6184888a14adf43eb5da,
